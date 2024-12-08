@@ -67,11 +67,8 @@ export const skills = [
   "Machine Learning",
   "Deep Learning",
   "AI",
-  "Git",
   "CI/CD",
   "Airflow",
-  "HTML5",
-  "CSS3",
 ];
 
 export const education = [
@@ -83,9 +80,7 @@ export const education = [
 ];
 
 export const aboutText = [
-  "I am a Lead Software Engineer with expertise in developing Web-GIS applications and data pipelines. My focus is on creating scalable solutions that make a positive impact.",
-  "With experience in both Web 2.0 and Web 3.0 technologies, I specialize in building robust applications that handle complex geospatial data. I have a particular interest in cryptography and its role in internet security.",
-  "Currently, I'm leading development at Farmdar, where I work on scaling data-intensive GIS applications and implementing infrastructure that can adapt to varying loads using tools like Kubernetes.",
+  "I am a Software Engineer with expertise in developing Web-GIS applications and data pipelines. My focus is on creating scalable solutions that make a positive impact. I like to reason from first principles and enjoy working on challenging problems",
 ];
 
 export const experience = [
@@ -98,7 +93,14 @@ export const experience = [
       "Built monolith Golang architecture and centralized tech infrastructure supporting multiple applications",
       "Managing infrastructure with Terraform and Kubernetes while building ML models",
     ],
-    skills: ["Golang", "PostGIS", "Kubernetes", "Machine Learning", "AWS"],
+    skills: [
+      "Golang",
+      "PostGIS",
+      "Kubernetes",
+      "Machine Learning",
+      "AWS",
+      "Mapbox",
+    ],
   },
   {
     date: "March 2023 - December 2023",
@@ -109,7 +111,7 @@ export const experience = [
       "Maintained React/Redux codebase with Kepler",
       "Developed internal console for geospatial data management",
     ],
-    skills: ["React", "MongoDB", "Kepler", "GIS"],
+    skills: ["React", "MongoDB", "Kepler", "GIS", "Mapbox"],
   },
   {
     date: "October 2022 - September 2023",
@@ -119,7 +121,7 @@ export const experience = [
       "Created parser for Excel macro conversion",
       "Enhanced backend systems and database operations",
     ],
-    skills: ["Angular", "Python", "PostgreSQL"],
+    skills: ["Angular", "Python", "PostgreSQL", "Mapbox"],
   },
 ];
 
@@ -130,8 +132,8 @@ export const projects = [
       "B2B and B2B2C platform for monitoring real-time crop conditions with AI-powered classification",
     url: "https://farmdar.ai",
     stars: null,
-    skills: ["Golang", "PostGIS", "Machine Learning", "Kubernetes"],
-    image: "/images/projects/yieldpro.png",
+    skills: ["Golang", "PostGIS", "Machine Learning", "Kubernetes","GIS", "Mapbox", "AWS", "Terraform"],
+    image: "/images/projects/yieldpro.jpeg",
   },
   {
     title: "Roman Urdu Compiler",
@@ -140,16 +142,34 @@ export const projects = [
     url: "https://github.com/UmairMirza1",
     stars: null,
     skills: ["C++", "Compiler Design", "Language Processing"],
-    image: "/images/projects/compiler.png",
+    image: "/images/projects/compiler.jpeg",
   },
   {
-    title: "AI-based Attendance System",
+    title: "Airflow Data Pipeline",
     description:
-      "Android application using Deep Learning for grouped facial recognition with Java/Kotlin interoperability.",
+      "Data pipelines for parallel processing of satellite imagery and weather data using Apache Airflow, Google Earth Engine, and QGIS",
+    url: "",
+    stars: null,
+    skills: ["Apache Airflow", "Google Earth Engine", "QGIS", "GIS", "GDAL", "Rasterio"],
+    image: "/images/projects/Airflow.png",
+  },
+  {
+    title: "Cropscan",
+    description:
+      "Crop classification platform using AI and satellite imagery covering 350 million acres globally, able to display GBs of data in seconds",
+    url: "https://www.farmdar.ai/products",
+    stars: null,
+    skills: ["Mapbox", "MongoDB", "Kepler", "GIS", 'Remote Sensing'],
+    image: "/images/projects/Cropscan.jpeg",
+  },
+  {
+    title: "AI-based Mobile Application",
+    description:
+      "Android application using Deep Learning for grouped facial recognition accounting to low light classroom environments with Java/Kotlin interoperability.",
     url: "https://github.com/UmairMirza1",
     stars: null,
     skills: ["Android", "Deep Learning", "Kotlin", "Python"],
-    image: "/images/projects/attendance.png",
+    image: "/images/projects/Oneclick.jpeg",
   },
 ];
 
@@ -158,23 +178,21 @@ export const repoLink = "https://github.com/UmairMirza1?tab=repositories";
 export const posts = [
   {
     year: "2024",
-    title: "Scaling GIS Applications with Golang and Kubernetes",
-    url: "https://linkedin.com/in/umair-mirza-aa8a21124",
+    title: "Building product and leading teams ",
+    url: "https://www.linkedin.com/posts/activity-7243298619137679360-3fqo?utm_source=share&utm_medium=member_desktop",
     thumbnail: "/images/posts/1.jpg",
   },
   {
     year: "2023",
-    title: "Building Efficient Data Pipelines for Geospatial Data",
-    url: "https://linkedin.com/in/umair-mirza-aa8a21124",
+    title: "How working at startups fosters growth",
+    url: "https://www.linkedin.com/posts/activity-7134162097134784512-bGhs?utm_source=share&utm_medium=member_desktop",
     thumbnail: "/images/posts/2.webp",
   },
 ];
 
 export const footerData = {
   text: [
-    "Built with Next.js and Tailwind CSS, deployed on GitHub Pages.",
-    "Focused on delivering high-performance web applications.",
-    "Copyright © 2024 Umair Mirza",
+    "Let's connect and build something great together!",
   ],
   socialLinks: [
     { href: "https://github.com/UmairMirza1", icon: "FaGithub" },
