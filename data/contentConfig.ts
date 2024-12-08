@@ -137,7 +137,7 @@ export const projects = [
     url: "https://farmdar.ai",
     stars: null,
     skills: ["Golang", "PostGIS", "Machine Learning", "Kubernetes","GIS", "Mapbox", "AWS", "Terraform"],
-    image: "/images/projects/Yieldpro.jpeg",
+    image: "/images/projects/YieldPro.jpeg",
   },
   {
     title: "Roman Urdu Compiler",
