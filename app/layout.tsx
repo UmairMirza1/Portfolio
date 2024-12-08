@@ -8,10 +8,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: metaData.title,
   description: metaData.description,
-  icons: {
-    icon: metaData.image,
+  keywords: metaData.keywords,
+  authors: [{ name: metaData.author }],
+  openGraph: {
+    ...metaData.openGraph
   },
-};
+}
 
 export default function RootLayout({
   children,

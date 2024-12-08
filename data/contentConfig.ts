@@ -1,10 +1,58 @@
 // contentConfig.ts
 
+// in data/contentConfig.ts
+
 export const metaData = {
   title: "Umair Mirza",
   description: "Lead Software Engineer Portfolio",
-  image: "/images/logos/web-icon.png",
-};
+  image: "images/github-project/preview.jpeg",
+  url: "https://umairrmirza.com",
+  author: "Umair Mirza",
+  
+  // Open Graph specific metadata
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://umairrmirza.com",
+    siteName: "Umair Mirza Portfolio",
+    title: "Umair Mirza - Lead Software Engineer",
+    description: "Lead Software Engineer Portfolio showcasing expertise in GIS, Machine Learning, and Full Stack Development",
+    images: [
+      {
+        url: "images/github-project/preview.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Umair Mirza Portfolio"
+      }
+    ]
+  },
+  
+  // Twitter specific metadata
+  twitter: {
+    handle: "@umairrmirza",
+    site: "@umairrmirza",
+    cardType: "summary_large_image"
+  },
+  
+  // Additional metadata
+  keywords: [
+    "Software Engineer",
+    "GIS Development",
+    "Machine Learning",
+    "Full Stack Developer",
+    "Golang",
+    "React",
+    "Node.js",
+    "Remote Sensing"
+  ],
+  
+  // Contact information
+  contact: {
+    email: "contact@umairrmirza.com",
+    github: "https://github.com/UmairMirza1",
+    linkedin: "https://linkedin.com/in/umairrmirza"
+  }
+}
 
 export const profileImage = "/images/logos/profile.jpg";
 
@@ -149,7 +197,7 @@ export const projects = [
     image: "/images/projects/compiler.jpeg",
   },
   {
-    title: "Airflow Data Pipeline",
+    title: "Airflow Data Pipelines",
     description:
       "Data pipelines for parallel processing of satellite imagery and weather data using Apache Airflow, Google Earth Engine, and QGIS",
     url: "",
