@@ -10,7 +10,7 @@ export default function Education() {
         transition={{ duration: 0.5 }}
         className="bg-gray-900 rounded-lg p-6 text-white"
       >
-        <h3 className="text-2xl font-semibold text-teal-400">Bachelor's degree in Computer Science</h3>
+        <h3 className="text-2xl font-semibold text-teal-400">Bachelor degree in Computer Science</h3>
         <p className="text-teal-300">National University of Computer and Emerging Sciences</p>
         <p className="text-teal-200">Lahore, Punjab, Pakistan</p>
         <p className="text-teal-200">GPA: 3.21</p>

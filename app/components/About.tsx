@@ -27,7 +27,7 @@ export default function About() {
           Beyond engineering, I bring passion for blockchain, machine learning, and scalable software development. From creating a Roman Urdu compiler to building blockchain-based e-voting systems, I thrive at the intersection of technology and problem-solving.
         </p>
         <p>
-          Let's connect to discuss ideas, collaboration opportunities, or how we can leverage technology to solve real-world challenges.
+          Happy to connect and discuss ideas, collaboration opportunities, or how we can leverage technology to solve real-world challenges.
         </p>
       </motion.div>
     </section>
