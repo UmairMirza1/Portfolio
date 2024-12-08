@@ -1,58 +1,27 @@
-'use client'
+import React from 'react';
+import Layout from '@/components/Layout';
+import Skills from '@/components/Skills';
+import Education from '@/components/Education';
+import { TabsData } from '@/components/TabsData';
 
-import { useState } from 'react'
-import Header from './components/Header'
-import About from './components/About'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
-import { motion } from 'framer-motion'
-
-export default function Home() {
-  const [activeSection, setActiveSection] = useState('about')
-
-  const sections = [
-    { id: 'about', component: About },
-    { id: 'experience', component: Experience },
-    { id: 'education', component: Education },
-    { id: 'projects', component: Projects },
-    { id: 'skills', component: Skills },
-    { id: 'contact', component: Contact },
-  ]
-
+const Home = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Header />
-      <nav className="mb-8">
-        <ul className="flex justify-center space-x-4">
-          {sections.map((section) => (
-            <li key={section.id}>
-              <button
-                className={`px-4 py-2 rounded-full ${
-                  activeSection === section.id
-                    ? 'bg-teal-500 text-black'
-                    : 'bg-black text-teal-500 border border-teal-500'
-                } transition-colors duration-300`}
-                onClick={() => setActiveSection(section.id)}
-              >
-                {section.id.charAt(0).toUpperCase() + section.id.slice(1)}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <motion.div
-        key={activeSection}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.3 }}
-      >
-        {sections.find((section) => section.id === activeSection)?.component()}
-      </motion.div>
-    </div>
-  )
-}
+    <Layout>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-40 items-start">
+        {/* Left Column */}
+        <div className="flex flex-col space-y-4">
+          <Skills />
+          <Education />
+          {/* <SocialLinks /> */}
+        </div>
 
+        {/* Right Column */}
+        <div className="mt-4 md:mt-0">
+          <TabsData />
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default Home;

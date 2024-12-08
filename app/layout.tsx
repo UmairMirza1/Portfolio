@@ -1,27 +1,26 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { metaData } from '@/data/contentConfig';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Umair Mirza - Software Engineer',
-  description: 'Portfolio of Umair Mirza, a passionate Software Engineer',
-}
+  title: metaData.title,
+  description: metaData.description,
+  icons: {
+    icon: metaData.image,
+  },
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>
-        <main className="min-h-screen">
-          {children}
-        </main>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
-
