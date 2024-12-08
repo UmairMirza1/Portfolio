@@ -74,13 +74,17 @@ export const skills = [
 export const education = [
   {
     degree: "Bachelor's in Computer Science",
-    school: "National University of Computer and Emerging Sciences",
+    school: "National University of Computer and Emerging Sciences (FAST-NUCES)",
     location: "Lahore, Pakistan",
+    date: "2018 - 2022",
+    GPA: "3.21",
+    achievements: "Dean's List GPA consecutively for 4 semesters in final 2 years\n Teacher's Assistant for 1.5 years"
+
   },
 ];
 
 export const aboutText = [
-  "I am a Software Engineer with expertise in developing Web-GIS applications and data pipelines. My focus is on creating scalable solutions that make a positive impact. I like to reason from first principles and enjoy working on challenging problems",
+  "I am a Software Engineer with expertise in developing Web-GIS applications and scalable data pipelines. I love to peel abstractions of computer science as well the providing value to the consumers to generate impact and make money. My focus is on creating scalable solutions that make a positive impact. I like to reason from first principles and enjoy working on challenging problems",
 ];
 
 export const experience = [
