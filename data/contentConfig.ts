@@ -140,8 +140,9 @@ export const experience = [
     date: "January 2024 - Present",
     position: "Lead Software Engineer at Farmdar",
     responsibilities: [
-      "Leading a team of 3+ engineers developing YieldPro, a B2B and B2B2C platform monitoring real-time crop conditions across 100,000 acres",
-      "Developed an AI-powered crop classification platform covering over 350 million acres globally",
+      "Leading a team of 10+ engineers developing Mulltiple AgriTech Products, YieldPro - a B2B and B2B2C platform monitoring real-time crop conditions across 100,000 acres",
+      "Cropscan -Developed an AI-powered crop classification platform covering over 350 million acres globally",
+      "Esurvey & Developro mobile applications",
       "Built monolith Golang architecture and centralized tech infrastructure supporting multiple applications",
       "Managing infrastructure with Terraform and Kubernetes while building ML models",
     ],
