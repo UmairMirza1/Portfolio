@@ -398,9 +398,15 @@ export const otherProjects = [
   {
     title: "Roman Urdu Compiler",
     description: "A compiler and virtual machine in C++ with an LL(1) parser and bytecode execution.",
-    // PLACEHOLDER: replace with the repository URL.
-    url: "https://github.com/UmairMirza1?tab=repositories",
+    url: "https://github.com/UmairMirza1/Roman-Urdu-Compiler",
     stack: ["C++", "Compilers"],
+  },
+  {
+    title: "Platformer in x86 assembly",
+    description:
+      "A Mario-style platformer for DOS in 16-bit x86 assembly, drawing straight to text-mode video memory with a custom keyboard interrupt handler.",
+    url: "https://github.com/UmairMirza1/Mario",
+    stack: ["x86 Assembly", "DOS"],
   },
 ];
 
