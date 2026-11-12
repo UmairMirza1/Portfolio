@@ -49,7 +49,9 @@ export const Tabs = ({
           }
         });
       },
-      { root: null, rootMargin: '0px', threshold: 0.5 }
+      // Mark a section active when it crosses a band near the top of the viewport,
+      // so long sections (taller than the screen) still activate their tab.
+      { root: null, rootMargin: '-20% 0px -70% 0px', threshold: 0 }
     );
 
     refs.current.forEach((ref) => {
@@ -73,7 +75,7 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full mb-4",
+          "sticky top-0 z-20 bg-[#0b0f27]/90 backdrop-blur py-2 flex justify-start [perspective:1000px] overflow-x-auto sm:overflow-visible hide-scrollbar max-w-full w-full mb-4",
           containerClassName
         )}
       >
@@ -107,7 +109,7 @@ export const Tabs = ({
           </button>
         ))}
       </div>
-      <div className={cn("w-full h-full overflow-y-auto hide-scrollbar", contentClassName)} style={{ maxHeight: "800px" }}>
+      <div className={cn("w-full h-full", contentClassName)}>
         {propTabs.map((tab, idx) => (
           <div
             key={tab.value}
@@ -115,7 +117,7 @@ export const Tabs = ({
             ref={(el) => {
               refs.current[idx] = el;
             }}
-            className="w-full py-10"
+            className="w-full py-8 scroll-mt-16"
           >
             {tab.content}
           </div>

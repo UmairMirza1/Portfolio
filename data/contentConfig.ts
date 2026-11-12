@@ -1,258 +1,259 @@
-// contentConfig.ts
+// All site copy lives here. Source of truth: "Portfolio Website Update Brief" (Nov 2026)
+// and "Umair Mirza - Resume (one page)". Keep titles, dates and numbers identical to the resume.
 
-// in data/contentConfig.ts
+export const siteUrl = "https://umairmirza.com";
 
 export const metaData = {
-  title: "Umair Mirza",
-  description: "Lead Software Engineer Portfolio",
-  image: "images/github-project/preview.jpeg",
-  url: "https://umairrmirza.com",
+  title: "Umair Mirza - Tech Lead, Backend and Data Platform",
+  description:
+    "I lead a team of 10+ engineers at Farmdar and build geospatial data platforms on AWS: Airflow pipelines for satellite imagery, a TB-scale Apache Iceberg data lake, and Go services.",
   author: "Umair Mirza",
-  
-  // Open Graph specific metadata
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://umairrmirza.com",
-    siteName: "Umair Mirza Portfolio",
-    title: "Umair Mirza - Lead Software Engineer",
-    description: "Lead Software Engineer Portfolio showcasing expertise in GIS, Machine Learning, and Full Stack Development",
-    images: [
-      {
-        url: "images/github-project/preview.jpeg",
-        width: 1200,
-        height: 630,
-        alt: "Umair Mirza Portfolio"
-      }
-    ]
+  siteName: "Umair Mirza",
+  ogImage: {
+    url: "/images/og.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Umair Mirza - Tech Lead, Backend and Data Platform",
   },
-  
-  // Twitter specific metadata
-  twitter: {
-    handle: "@umairrmirza",
-    site: "@umairrmirza",
-    cardType: "summary_large_image"
-  },
-  
-  // Additional metadata
   keywords: [
-    "Software Engineer",
-    "GIS Development",
-    "Machine Learning",
-    "Full Stack Developer",
-    "Golang",
-    "React",
-    "Node.js",
-    "Remote Sensing"
+    "Tech Lead",
+    "Backend Engineer",
+    "Data Platform",
+    "Data Engineer",
+    "Geospatial",
+    "Apache Airflow",
+    "Apache Iceberg",
+    "Trino",
+    "Go",
+    "AWS",
+    "Kubernetes",
   ],
-  
-  // Contact information
-  contact: {
-    email: "contact@umairrmirza.com",
-    github: "https://github.com/UmairMirza1",
-    linkedin: "https://linkedin.com/in/umairrmirza"
-  }
-}
+};
+
+export const contact = {
+  email: "umair3215@gmail.com",
+  linkedin: "https://linkedin.com/in/umair-mirza-aa8a21124",
+  github: "https://github.com/UmairMirza1",
+  calendly: "https://calendly.com/umair3215/",
+  timezone: "Remote, UTC+5, overlaps European working hours",
+};
 
 export const profileImage = "/images/logos/profile.jpg";
 
 export const headerData = {
   name: "Umair Mirza",
-  title: "Lead Software Engineer | AI/ML Engineer",
+  title: "Tech Lead, Backend and Data Platform",
+  company: "Farmdar (Series A agritech)",
   location: "Lahore, Pakistan",
-  locationIcon: "FaMapMarkerAlt",
-  description:
-    "Computer Scientist with a passion for transforming innovative ideas into impactful solutions, coupled with a strong aptitude for leadership and driving team success.",
-  buttons: [
-    {
-      text: "Book a Meeting",
-      href: "https://calendly.com/umair3215/",
-      className:
-        "inline-block shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear",
-      isDownloadButton: false,
-    },
-    {
-      text: "Download Resume",
-      href: "/docs/cv.pdf",
-      className:
-        "inline-block shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear",
-      isDownloadButton: true,
-    },
-    {
-      text: "Contact Me",
-      href: "mailto:umair3215@gmail.com",
-      className:
-        "shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear inline-block",
-      isDownloadButton: false,
-    },
-  ],
+  availability: "Open to remote roles and relocation (Netherlands, Ireland, Germany, Luxembourg)",
+  summary:
+    "I lead a team of 10+ engineers and build geospatial data platforms on AWS: Airflow pipelines for satellite imagery, a TB-scale Apache Iceberg data lake, and Go services.",
 };
 
-export const skills = [
-  "Golang",
-  "Python",
-  "Java",
-  "JavaScript",
-  "TypeScript",
-  "Kotlin",
-  "React",
-  "Angular",
-  "Next.js",
-  "Node.js",
-  "NestJS",
-  "PostgreSQL",
-  "MongoDB",
-  "PostGIS",
-  "Redis",
-  "Docker",
-  "Kubernetes",
-  "Terraform",
-  "AWS",
-  "MapboxGL",
-  "Kepler",
-  "QGIS",
-  "Google Earth Engine",
-  "Machine Learning",
-  "Deep Learning",
-  "AI",
-  "CI/CD",
-  "Airflow",
+export const aboutText = [
+  "I'm the tech lead for backend and data platform at Farmdar, a Series A agritech company. I lead a team of 10+ engineers and own the platform end to end, from the Airflow pipelines that process satellite imagery to the TB-scale data lake and the Go backend that serves 100K+ requests a day.",
+  "Our products cover millions of acres, and the API is used in production by FFC, Corteva, Engro and Kubota. I enjoy data platforms, geospatial problems and helping a team ship good systems.",
+  "I'm open to remote roles and to relocating to the Netherlands, Ireland, Germany or Luxembourg.",
+];
+
+export type Role = {
+  title: string;
+  dates: string;
+  bullets: string[];
+};
+
+export type Employer = {
+  company: string;
+  detail: string;
+  location: string;
+  roles: Role[];
+};
+
+export const experience: Employer[] = [
+  {
+    company: "Farmdar",
+    detail: "Series A agritech",
+    location: "Lahore, Pakistan",
+    roles: [
+      {
+        title: "Tech Lead, Backend and Data Platform",
+        dates: "Feb 2025 - Present",
+        bullets: [
+          "Lead a team of 10+ engineers; own architecture, code review and delivery across backend, data and infrastructure.",
+          "Built a TB-scale geospatial data lake on AWS S3 Tables and Apache Iceberg, queried through Trino, with PostGIS and H3 indexing.",
+          "Built OAuth authentication on AWS Cognito, used by every Farmdar application, and consolidated separate services into one Go backend handling 100K+ daily requests, with P95 latency down 40%.",
+          "Automated the 3 m Planet imagery pipeline (plant health, stress and productivity-zone maps), cutting delivery from weeks to hours; wrote 10+ Airflow DAGs and a custom Airflow-Kubernetes operator, cutting manual work by 70%.",
+          "Own infrastructure as code with Terraform, Helm and GitHub Actions, cutting deployment time by 60%. Launched a production API adopted by FFC, Corteva, Engro and Kubota, and built a crop water requirement tool for the FAO.",
+        ],
+      },
+      {
+        title: "Software Engineer II",
+        dates: "Jan 2024 - Jan 2025",
+        bullets: [
+          "Led development of YieldPro, a crop-monitoring platform built from scratch, generating $200K+ in revenue and serving 50K+ farmers.",
+          "Automated satellite image analysis with Apache Airflow, improving data throughput 3x.",
+          "Introduced role-based access control (RBAC) and built a PostGIS tile server for vector and raster tiles.",
+          "Delivered an Angular geospatial app for real-time map analytics, cutting user task completion time by 50%.",
+        ],
+      },
+      {
+        title: "Software Engineer",
+        dates: "Mar 2023 - Dec 2023",
+        bullets: [
+          "Designed MongoDB schemas for geospatial and agronomic datasets and built an internal React console for managing map layers.",
+          "Refactored a legacy React/Redux and Kepler codebase and supported its migration to Mapbox GL JS.",
+        ],
+      },
+    ],
+  },
+  {
+    company: "Tectiers GmbH",
+    detail: "Fintech, part-time remote contract",
+    location: "Vienna, Austria",
+    roles: [
+      {
+        title: "Software Engineer",
+        dates: "Oct 2022 - Sep 2023",
+        bullets: [
+          "Built Apache Airflow pipelines for BMW's enterprise reporting platform, automating data extraction and weekly database restores across environments.",
+          "Built a fintech analytics platform with Angular, Django and PostgreSQL.",
+          "Wrote a Python transpiler that converts Excel/VBA logic into native Excel functions with 95% functional parity.",
+        ],
+      },
+    ],
+  },
+  {
+    company: "FAST-NUCES",
+    detail: "University",
+    location: "Lahore, Pakistan",
+    roles: [
+      {
+        title: "Teaching Assistant",
+        dates: "Feb 2022 - May 2023",
+        bullets: [
+          "Mentored 100+ students in Android (Kotlin) and distributed computing (MPI, OpenMP).",
+        ],
+      },
+    ],
+  },
+];
+
+export type FeaturedWork = {
+  title: string;
+  problem: string;
+  built: string;
+  stack: string[];
+  result: string;
+  status?: string;
+  // PLACEHOLDER: set `image` once Farmdar approves a public screenshot.
+  image?: { src: string; alt: string };
+};
+
+export const featuredWork: FeaturedWork[] = [
+  {
+    title: "Geospatial data lake",
+    problem:
+      "Satellite imagery, field data and model outputs lived in separate stores, so every analysis started with finding and copying data.",
+    built:
+      "A data lake on AWS S3 Tables and Apache Iceberg, queried through Trino, with PostGIS and H3 indexing for raster and vector data.",
+    stack: ["S3 Tables", "Apache Iceberg", "Trino", "PostGIS", "H3"],
+    result: "TB-scale, one place to query every dataset across products covering millions of acres.",
+    image: {
+      src: "/images/projects/data-platform.svg",
+      alt: "Data platform architecture: satellite imagery and field data flow through Airflow on EKS into an Iceberg data lake on S3 Tables, queried by Trino and served by the Go backend behind Cognito.",
+    },
+  },
+  {
+    title: "Satellite imagery pipelines",
+    problem: "Imagery processing was manual and slow, and delivering new maps to customers took weeks.",
+    built:
+      "10+ Airflow DAGs for imagery ETL and MLOps, a custom Airflow-Kubernetes operator that runs Jupyter notebooks through Papermill (one pod per task), and an automated 3 m Planet pipeline producing plant health, stress and productivity-zone maps.",
+    stack: ["Apache Airflow", "Kubernetes", "Papermill", "Python", "GDAL", "Rasterio"],
+    result: "Throughput up 3x, manual work down 70%, Planet imagery delivery from weeks to hours.",
+  },
+  {
+    title: "YieldPro",
+    problem: "Growers and agribusinesses needed to see crop conditions across their fields without visiting every one.",
+    built: "A crop-monitoring platform built from scratch, from the data pipelines to the map interface.",
+    stack: ["Go", "PostGIS", "Airflow", "Mapbox GL", "AWS"],
+    result: "$200K+ in revenue and 50K+ farmers served.",
+  },
+  {
+    title: "Unified auth and Go backend",
+    problem: "Each application had its own service and its own login, which made changes slow and access hard to manage.",
+    built:
+      "OAuth on AWS Cognito used by every Farmdar application, with Cognito tokens verified in Go through JWKS, and separate services consolidated into one Go backend.",
+    stack: ["Go", "AWS Cognito", "OAuth", "PostgreSQL", "Kubernetes"],
+    result: "100K+ daily requests, P95 latency down 40%, and a production API adopted by FFC, Corteva, Engro and Kubota.",
+  },
+  {
+    title: "Crop intelligence models",
+    problem: "Customers and partners need answers about water use, yield and crop type, not raw imagery.",
+    built:
+      "A crop water requirement tool built and managed for the FAO, a pixel-level corn and soybean yield model for the US Corn Belt on Google Earth Engine, and CropScan, an automated crop-mapping model, for which I curated five years of hand-labelled field data and satellite imagery into a training set in the data lake.",
+    stack: ["Google Earth Engine", "TensorFlow", "Python", "Apache Iceberg"],
+    result: "The FAO tool and the Corn Belt yield model are built; CropScan is in progress.",
+    status: "CropScan in progress",
+  },
+];
+
+export const otherProjects = [
+  {
+    title: "Roman Urdu Compiler",
+    description: "A compiler and virtual machine in C++ with an LL(1) parser and bytecode execution.",
+    // PLACEHOLDER: replace with the repository URL.
+    url: "https://github.com/UmairMirza1?tab=repositories",
+    stack: ["C++", "Compilers"],
+  },
+];
+
+export const skillGroups = [
+  {
+    name: "Languages",
+    items: [
+      "Go",
+      "Python (Airflow, FastAPI, Django, GDAL, Rasterio, NumPy, Pandas)",
+      "TypeScript (Angular, React)",
+      "SQL",
+    ],
+  },
+  {
+    name: "Data and geospatial",
+    items: [
+      "Apache Airflow",
+      "Apache Iceberg",
+      "AWS S3 Tables",
+      "Trino",
+      "Spark",
+      "PostgreSQL",
+      "PostGIS",
+      "H3",
+      "MongoDB",
+      "Google Earth Engine",
+      "TensorFlow",
+      "Mapbox GL",
+    ],
+  },
+  {
+    name: "Cloud and infrastructure",
+    items: [
+      "AWS (EKS, RDS, S3, Cognito, IAM)",
+      "Kubernetes",
+      "Terraform",
+      "Helm",
+      "GitHub Actions",
+    ],
+  },
 ];
 
 export const education = [
   {
-    degree: "Bachelor's in Computer Science",
-    school: "National University of Computer and Emerging Sciences (FAST-NUCES)",
-    location: "Lahore, Pakistan",
-    date: "2018 - 2022",
-    GPA: "3.21",
-    achievements: "Dean's List GPA consecutively for 4 semesters in final 2 years\n Teacher's Assistant for 1.5 years"
-
-  },
-];
-
-export const aboutText = [
-  "I am a Software Engineer with expertise in developing Web-GIS applications and scalable data pipelines. I love to peel abstractions of computer science as well the providing value to the consumers to generate impact and make money. My focus is on creating scalable solutions that make a positive impact. I like to reason from first principles and enjoy working on challenging problems",
-];
-
-export const experience = [
-  {
-    date: "January 2024 - Present",
-    position: "Lead Software Engineer at Farmdar",
-    responsibilities: [
-      "Leading a team of 10+ engineers developing Mulltiple AgriTech Products, YieldPro - a B2B and B2B2C platform monitoring real-time crop conditions across 100,000 acres",
-      "Cropscan -Developed an AI-powered crop classification platform covering over 350 million acres globally",
-      "Esurvey & Developro mobile applications",
-      "Built monolith Golang architecture and centralized tech infrastructure supporting multiple applications",
-      "Managing infrastructure with Terraform and Kubernetes while building ML models",
-    ],
-    skills: [
-      "Golang",
-      "PostGIS",
-      "Kubernetes",
-      "Machine Learning",
-      "AWS",
-      "Mapbox",
-    ],
-  },
-  {
-    date: "March 2023 - December 2023",
-    position: "Software Engineer at Farmdar",
-    responsibilities: [
-      "Collaborated in startup's early stages on core challenges",
-      "Worked with MongoDB design and optimization",
-      "Maintained React/Redux codebase with Kepler",
-      "Developed internal console for geospatial data management",
-    ],
-    skills: ["React", "MongoDB", "Kepler", "GIS", "Mapbox"],
-  },
-  {
-    date: "October 2022 - September 2023",
-    position: "Software Engineer at Tectiers",
-    responsibilities: [
-      "Developed distributed financial software using Angular and Python",
-      "Created parser for Excel macro conversion",
-      "Enhanced backend systems and database operations",
-    ],
-    skills: ["Angular", "Python", "PostgreSQL", "Mapbox"],
-  },
-];
-
-export const projects = [
-  {
-    title: "YieldPro Platform",
-    description:
-      "B2B and B2B2C platform for monitoring real-time crop conditions with AI-powered classification",
-    url: "https://farmdar.ai",
-    stars: null,
-    skills: ["Golang", "PostGIS", "Machine Learning", "Kubernetes","GIS", "Mapbox", "AWS", "Terraform"],
-    image: "/images/projects/YieldPro.jpeg",
-  },
-  {
-    title: "Roman Urdu Compiler",
-    description:
-      "Custom language compiler built in C++ enabling native community to code using Roman English, featuring Syntax Directed Translation.",
-    url: "https://github.com/UmairMirza1",
-    stars: null,
-    skills: ["C++", "Compiler Design", "Language Processing"],
-    image: "/images/projects/compiler.jpeg",
-  },
-  {
-    title: "Airflow Data Pipelines",
-    description:
-      "Data pipelines for parallel processing of satellite imagery and weather data using Apache Airflow, Google Earth Engine, and QGIS",
-    url: "",
-    stars: null,
-    skills: ["Apache Airflow", "Google Earth Engine", "QGIS", "GIS", "GDAL", "Rasterio"],
-    image: "/images/projects/Airflow.png",
-  },
-  {
-    title: "Cropscan",
-    description:
-      "Crop classification platform using AI and satellite imagery covering 350 million acres globally, able to display GBs of data in seconds",
-    url: "https://www.farmdar.ai/products",
-    stars: null,
-    skills: ["Mapbox", "MongoDB", "Kepler", "GIS", 'Remote Sensing'],
-    image: "/images/projects/Cropscan.jpeg",
-  },
-  {
-    title: "AI-based Mobile Application",
-    description:
-      "Android application using Deep Learning for grouped facial recognition accounting to low light classroom environments with Java/Kotlin interoperability.",
-    url: "https://github.com/UmairMirza1",
-    stars: null,
-    skills: ["Android", "Deep Learning", "Kotlin", "Python"],
-    image: "/images/projects/Oneclick.jpeg",
-  },
-];
-
-export const repoLink = "https://github.com/UmairMirza1?tab=repositories";
-
-export const posts = [
-  {
-    year: "2024",
-    title: "Building product and leading teams ",
-    url: "https://www.linkedin.com/posts/activity-7243298619137679360-3fqo?utm_source=share&utm_medium=member_desktop",
-    thumbnail: "/images/posts/1.jpg",
-  },
-  {
+    degree: "BS Computer Science",
+    school: "FAST-NUCES, Lahore",
     year: "2023",
-    title: "How working at startups fosters growth",
-    url: "https://www.linkedin.com/posts/activity-7134162097134784512-bGhs?utm_source=share&utm_medium=member_desktop",
-    thumbnail: "/images/posts/2.webp",
+    achievements: [
+      "Dean's List, four consecutive semesters",
+      "Teaching Assistant",
+    ],
   },
 ];
-
-export const footerData = {
-  text: [
-    "Let's connect and build something great together!",
-  ],
-  socialLinks: [
-    { href: "https://github.com/UmairMirza1", icon: "FaGithub" },
-    {
-      href: "https://linkedin.com/in/umair-mirza-aa8a21124",
-      icon: "FaLinkedin",
-    },
-    { href: "mailto:umair3215@gmail.com", icon: "FaEnvelope" },
-  ],
-};

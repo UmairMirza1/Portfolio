@@ -11,7 +11,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="relative min-h-screen flex flex-col bg-custom-gradient">
+    <div className="relative min-h-screen flex flex-col bg-custom-gradient overflow-x-clip">
       <Header profileImage={profileImage} />
       <div>
         <Spotlight
@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         />
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
-      <main className="flex-grow container mx-auto p-4">
+      <main className="relative z-10 flex-grow w-full max-w-7xl mx-auto px-4">
         {children}
       </main>
       <Footer />
