@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Crop intelligence platform</title>
+  <desc id="d">Sentinel-2, Landsat and weather data from Google Earth Engine, plus field surveys, feed Airflow pipelines that acquire features, run batch inference with the data science team's models, apply calibration and compute zonal statistics. Outputs are stored in S3 as Parquet and rasters and in PostGIS. Products on top are the FAO crop-pattern planning tool, built with FastAPI and Angular, corn and soybean yield estimates, and CropScan reports and a B2B portal, which is in progress.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5fd0e6"/></marker>
+    <style>
+      .box{fill:#121a33;stroke:#2f4a6d;stroke-width:1.5}
+      .key{fill:#10233a;stroke:#2eb0cb;stroke-width:2}
+      .wip{fill:#2a1f0c;stroke:#d39a2c;stroke-width:1.5;stroke-dasharray:5 4}
+      .h{fill:#ffffff;font-size:19px;font-weight:700}
+      .s{fill:#a9bdd3;font-size:14px}
+      .lbl{fill:#7f93ab;font-size:12px;letter-spacing:1.5px}
+      .ln{stroke:#5fd0e6;stroke-width:2;fill:none;marker-end:url(#a)}
+      .grp{fill:none;stroke:#2f4a6d;stroke-dasharray:6 5}
+    </style>
+  </defs>
+  <rect width="600" height="720" rx="16" fill="#0b1020"/>
+  <rect class="box" x="20" y="20" width="270" height="64" rx="10"/>
+  <text class="h" x="155" y="48.5" text-anchor="middle">Earth observation</text>
+  <text class="s" x="155" y="69.5" text-anchor="middle">Sentinel-2 · Landsat · weather</text>
+  <rect class="box" x="310" y="20" width="270" height="64" rx="10"/>
+  <text class="h" x="445" y="48.5" text-anchor="middle">Field data</text>
+  <text class="s" x="445" y="69.5" text-anchor="middle">surveys from the mobile app</text>
+  <path class="ln" d="M155 84V118"/>
+  <path class="ln" d="M445 84V118"/>
+  <rect class="key" x="20" y="120" width="560" height="104" rx="10"/>
+  <text class="h" x="300" y="149.5" text-anchor="middle">Airflow pipelines</text>
+  <text class="s" x="300" y="170.5" text-anchor="middle">feature acquisition from Google Earth Engine</text>
+  <text class="s" x="300" y="189.5" text-anchor="middle">batch inference · calibration · zonal statistics</text>
+  <text class="s" x="300" y="208.5" text-anchor="middle">notebooks run as parameterised, retryable tasks</text>
+  <rect class="box" x="20" y="244" width="560" height="64" rx="10"/>
+  <text class="h" x="300" y="272.5" text-anchor="middle">Models from the data science team</text>
+  <text class="s" x="300" y="293.5" text-anchor="middle">crop classification · yield (TensorFlow) · evapotranspiration</text>
+  <path class="ln" d="M300 224V242"/>
+  <path class="ln" d="M300 308V342"/>
+  <rect class="grp" x="20" y="344" width="560" height="104" rx="12"/>
+  <text class="lbl" x="36" y="366">STORAGE</text>
+  <rect class="box" x="36" y="376" width="256" height="60" rx="10"/>
+  <text class="h" x="164" y="402.5" text-anchor="middle">Amazon S3</text>
+  <text class="s" x="164" y="423.5" text-anchor="middle">Parquet and rasters</text>
+  <rect class="box" x="308" y="376" width="256" height="60" rx="10"/>
+  <text class="h" x="436" y="402.5" text-anchor="middle">PostGIS</text>
+  <text class="s" x="436" y="423.5" text-anchor="middle">layers, statistics, results</text>
+  <path class="ln" d="M300 448V466H110V484"/>
+  <path class="ln" d="M300 466V484"/>
+  <path class="ln" d="M300 466H490V484"/>
+  <rect class="key" x="20" y="486" width="180" height="124" rx="10"/>
+  <text class="h" x="110" y="516" text-anchor="middle">FAO planner</text>
+  <text class="s" x="110" y="537" text-anchor="middle">what-if crop</text>
+  <text class="s" x="110" y="556" text-anchor="middle">patterns, water</text>
+  <text class="s" x="110" y="575" text-anchor="middle">and yield</text>
+  <text class="s" x="110" y="594" text-anchor="middle">FastAPI + Angular</text>
+  <rect class="box" x="210" y="486" width="180" height="124" rx="10"/>
+  <text class="h" x="300" y="516" text-anchor="middle">Yield estimates</text>
+  <text class="s" x="300" y="537" text-anchor="middle">pixel-level</text>
+  <text class="s" x="300" y="556" text-anchor="middle">corn and soybean</text>
+  <text class="s" x="300" y="575" text-anchor="middle">time-series model</text>
+  <text class="s" x="300" y="594" text-anchor="middle">calibrated output</text>
+  <rect class="wip" x="400" y="486" width="180" height="124" rx="10"/>
+  <text class="h" x="490" y="516" text-anchor="middle">CropScan</text>
+  <text class="s" x="490" y="537" text-anchor="middle">classification</text>
+  <text class="s" x="490" y="556" text-anchor="middle">reports and a</text>
+  <text class="s" x="490" y="575" text-anchor="middle">B2B portal</text>
+  <text class="s" x="490" y="594" text-anchor="middle">in progress</text>
+  <rect class="grp" x="20" y="630" width="560" height="70" rx="12"/>
+  <text class="lbl" x="36" y="652">PRINCIPLE</text>
+  <text class="s" x="300" y="671" text-anchor="middle">models stay in the form data scientists maintain; the platform ships them</text>
+</svg>

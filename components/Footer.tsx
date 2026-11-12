@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { contact } from "@/data/contentConfig";
 
@@ -8,11 +7,11 @@ const socialLinks = [
   { href: `mailto:${contact.email}`, label: "Email", Icon: FaEnvelope },
 ];
 
-const Footer = () => {
-  return (
-    <footer className="mx-4 mt-12 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-800 pt-6 text-sm text-gray-400">
+const Footer = () => (
+  <footer className="border-t border-zinc-200 dark:border-zinc-800">
+    <div className="container-page flex flex-col-reverse sm:flex-row items-center justify-between gap-4 py-8 text-sm text-zinc-500">
       <p>© {new Date().getFullYear()} Umair Mirza</p>
-      <div className="flex gap-3">
+      <div className="flex gap-1">
         {socialLinks.map(({ href, label, Icon }) => (
           <a
             key={label}
@@ -20,14 +19,14 @@ const Footer = () => {
             aria-label={label}
             target={href.startsWith("mailto:") ? undefined : "_blank"}
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white bg-[#0D1425] p-2 rounded-lg border border-gray-600 hover:border-white transition-all"
+            className="rounded-md p-2 text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-900 dark:hover:text-zinc-50"
           >
-            <Icon size={20} />
+            <Icon size={18} />
           </a>
         ))}
       </div>
-    </footer>
-  );
-};
+    </div>
+  </footer>
+);
 
 export default Footer;

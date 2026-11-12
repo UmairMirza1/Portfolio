@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 746" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
   <title id="t">Data platform architecture</title>
-  <desc id="d">Satellite imagery and field data are processed by Apache Airflow on EKS into an Apache Iceberg data lake on S3 Tables alongside PostGIS with H3 indexing. Trino queries the storage layer, and the Go backend, secured with Cognito OAuth, serves Farmdar apps and the production API. Everything runs on AWS, managed with Terraform, Helm and GitHub Actions.</desc>
+  <desc id="d">Satellite imagery and field surveys are processed by Apache Airflow on EKS into Amazon S3, Apache Iceberg tables on S3 Tables, and PostGIS. Trino queries the Iceberg tables and PostGIS, and the Go backend, secured with Cognito OAuth, serves Farmdar apps and the production API. Everything runs on AWS, managed with Terraform, Helm and GitHub Actions.</desc>
   <defs>
     <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0L10 5L0 10z" fill="#5fd0e6"/>
@@ -20,10 +20,10 @@
   <!-- Sources -->
   <rect class="box" x="20" y="20" width="270" height="64" rx="10"/>
   <text class="h" x="155" y="48" text-anchor="middle">Satellite imagery</text>
-  <text class="s" x="155" y="70" text-anchor="middle">Planet 3 m</text>
+  <text class="s" x="155" y="70" text-anchor="middle">Planet 3 m · Sentinel · Landsat</text>
   <rect class="box" x="310" y="20" width="270" height="64" rx="10"/>
   <text class="h" x="445" y="48" text-anchor="middle">Field data</text>
-  <text class="s" x="445" y="70" text-anchor="middle">five years, hand-labelled</text>
+  <text class="s" x="445" y="70" text-anchor="middle">surveys from the mobile app</text>
   <path class="ln" d="M155 84V118"/>
   <path class="ln" d="M445 84V118"/>
 
@@ -37,18 +37,21 @@
   <!-- Storage -->
   <rect x="20" y="240" width="560" height="110" rx="12" fill="none" stroke="#2f4a6d" stroke-dasharray="6 5"/>
   <text class="lbl" x="36" y="262">STORAGE</text>
-  <rect class="key" x="36" y="272" width="330" height="64" rx="10"/>
-  <text class="h" x="201" y="299" text-anchor="middle">Apache Iceberg on S3 Tables</text>
-  <text class="s" x="201" y="321" text-anchor="middle">TB-scale data lake</text>
-  <rect class="box" x="380" y="272" width="184" height="64" rx="10"/>
-  <text class="h" x="472" y="299" text-anchor="middle">PostGIS</text>
-  <text class="s" x="472" y="321" text-anchor="middle">H3 indexing</text>
+  <rect class="box" x="36" y="272" width="168" height="64" rx="10"/>
+  <text class="h" x="120" y="299" text-anchor="middle">Amazon S3</text>
+  <text class="s" x="120" y="321" text-anchor="middle">TB-scale rasters</text>
+  <rect class="key" x="216" y="272" width="168" height="64" rx="10"/>
+  <text class="h" x="300" y="299" text-anchor="middle">Apache Iceberg</text>
+  <text class="s" x="300" y="321" text-anchor="middle">on S3 Tables</text>
+  <rect class="box" x="396" y="272" width="168" height="64" rx="10"/>
+  <text class="h" x="480" y="299" text-anchor="middle">PostGIS</text>
+  <text class="s" x="480" y="321" text-anchor="middle">production database</text>
   <path class="ln" d="M300 350V384"/>
 
   <!-- Query -->
   <rect class="key" x="20" y="386" width="560" height="60" rx="10"/>
   <text class="h" x="300" y="413" text-anchor="middle">Trino</text>
-  <text class="s" x="300" y="434" text-anchor="middle">SQL over raster and vector data</text>
+  <text class="s" x="300" y="434" text-anchor="middle">one SQL layer over Iceberg and live PostGIS</text>
   <path class="ln" d="M300 446V480"/>
 
   <!-- Serving -->

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Satellite imagery pipeline</title>
+  <desc id="d">Planet subscriptions deliver 3 m imagery straight to S3, alongside Sentinel and Landsat. Airflow on EKS routes tasks to Celery queues sized for low, medium, high-memory and GPU work, scaled on queue depth with spot nodes. Each notebook step runs in its own pod through a custom operator that executes the notebook with Papermill. Batches of fields go through shortlist, download, plant health and nitrogen maps, database load, scouting points and PDF reports, ending in PostGIS, map tiles and reports.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5fd0e6"/></marker>
+    <style>
+      .box{fill:#121a33;stroke:#2f4a6d;stroke-width:1.5}
+      .key{fill:#10233a;stroke:#2eb0cb;stroke-width:2}
+      .wip{fill:#2a1f0c;stroke:#d39a2c;stroke-width:1.5;stroke-dasharray:5 4}
+      .h{fill:#ffffff;font-size:19px;font-weight:700}
+      .s{fill:#a9bdd3;font-size:14px}
+      .lbl{fill:#7f93ab;font-size:12px;letter-spacing:1.5px}
+      .ln{stroke:#5fd0e6;stroke-width:2;fill:none;marker-end:url(#a)}
+      .grp{fill:none;stroke:#2f4a6d;stroke-dasharray:6 5}
+    </style>
+  </defs>
+  <rect width="600" height="720" rx="16" fill="#0b1020"/>
+  <rect class="box" x="20" y="20" width="270" height="64" rx="10"/>
+  <text class="h" x="155" y="48.5" text-anchor="middle">Planet subscriptions</text>
+  <text class="s" x="155" y="69.5" text-anchor="middle">3 m, 8-band, delivered to S3</text>
+  <rect class="box" x="310" y="20" width="270" height="64" rx="10"/>
+  <text class="h" x="445" y="48.5" text-anchor="middle">Sentinel · Landsat</text>
+  <text class="s" x="445" y="69.5" text-anchor="middle">public archives</text>
+  <path class="ln" d="M155 84V118"/>
+  <path class="ln" d="M445 84V118"/>
+  <rect class="key" x="20" y="120" width="560" height="64" rx="10"/>
+  <text class="h" x="300" y="148.5" text-anchor="middle">Apache Airflow on EKS</text>
+  <text class="s" x="300" y="169.5" text-anchor="middle">scheduler, Celery workers, DAG parameters</text>
+  <path class="ln" d="M300 184V218"/>
+  <rect class="grp" x="20" y="220" width="560" height="104" rx="12"/>
+  <text class="lbl" x="36" y="242">WORKER QUEUES · SCALED ON QUEUE DEPTH · SPOT NODES</text>
+  <rect class="box" x="36" y="252" width="124" height="60" rx="10"/>
+  <text class="h" x="98" y="278.5" text-anchor="middle">low</text>
+  <text class="s" x="98" y="299.5" text-anchor="middle">API calls</text>
+  <rect class="box" x="170" y="252" width="124" height="60" rx="10"/>
+  <text class="h" x="232" y="278.5" text-anchor="middle">medium</text>
+  <text class="s" x="232" y="299.5" text-anchor="middle">vector work</text>
+  <rect class="box" x="304" y="252" width="124" height="60" rx="10"/>
+  <text class="h" x="366" y="278.5" text-anchor="middle">high-mem</text>
+  <text class="s" x="366" y="299.5" text-anchor="middle">rasters</text>
+  <rect class="box" x="438" y="252" width="124" height="60" rx="10"/>
+  <text class="h" x="500" y="278.5" text-anchor="middle">GPU</text>
+  <text class="s" x="500" y="299.5" text-anchor="middle">inference</text>
+  <path class="ln" d="M300 324V358"/>
+  <rect class="key" x="20" y="360" width="560" height="84" rx="10"/>
+  <text class="h" x="300" y="389" text-anchor="middle">Notebook operator</text>
+  <text class="s" x="300" y="410" text-anchor="middle">one Kubernetes pod per task: pull the shared library,</text>
+  <text class="s" x="300" y="429" text-anchor="middle">then Papermill runs the notebook with DAG parameters</text>
+  <path class="ln" d="M300 444V478"/>
+  <rect class="grp" x="20" y="480" width="560" height="144" rx="12"/>
+  <text class="lbl" x="36" y="502">PIPELINE, MAPPED OVER BATCHES OF FIELDS</text>
+  <rect class="box" x="36" y="508" width="160" height="50" rx="10"/>
+  <text class="h" x="116" y="529.5" text-anchor="middle">Shortlist</text>
+  <text class="s" x="116" y="550.5" text-anchor="middle">cloud-free dates</text>
+  <path class="ln" d="M196 533H218"/>
+  <rect class="box" x="220" y="508" width="160" height="50" rx="10"/>
+  <text class="h" x="300" y="529.5" text-anchor="middle">Download</text>
+  <text class="s" x="300" y="550.5" text-anchor="middle">from S3</text>
+  <path class="ln" d="M380 533H402"/>
+  <rect class="box" x="404" y="508" width="160" height="50" rx="10"/>
+  <text class="h" x="484" y="529.5" text-anchor="middle">Indices</text>
+  <text class="s" x="484" y="550.5" text-anchor="middle">plant health, nitrogen</text>
+  <rect class="box" x="36" y="566" width="160" height="50" rx="10"/>
+  <text class="h" x="116" y="587.5" text-anchor="middle">Load</text>
+  <text class="s" x="116" y="608.5" text-anchor="middle">to PostGIS</text>
+  <path class="ln" d="M196 591H218"/>
+  <rect class="box" x="220" y="566" width="160" height="50" rx="10"/>
+  <text class="h" x="300" y="587.5" text-anchor="middle">Scouting</text>
+  <text class="s" x="300" y="608.5" text-anchor="middle">points to visit</text>
+  <path class="ln" d="M380 591H402"/>
+  <rect class="box" x="404" y="566" width="160" height="50" rx="10"/>
+  <text class="h" x="484" y="587.5" text-anchor="middle">Reports</text>
+  <text class="s" x="484" y="608.5" text-anchor="middle">PDF per field</text>
+  <path class="ln" d="M300 624V658"/>
+  <rect class="box" x="20" y="660" width="560" height="44" rx="10"/>
+  <text class="h" x="300" y="688" text-anchor="middle">Outputs: PostGIS layers · map tiles · client reports</text>
+</svg>
