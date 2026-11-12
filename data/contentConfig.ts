@@ -45,7 +45,6 @@ export const headerData = {
   title: "Tech Lead, Backend and Data Platform",
   company: "Farmdar (Series A agritech)",
   location: "Lahore, Pakistan",
-  now: "Building CropScan's production pipeline",
   availability: "Open to remote roles and relocation (Netherlands, Ireland, Germany, Luxembourg)",
   summary:
     "I lead a team of 10+ engineers and build geospatial data platforms on AWS: Airflow pipelines for satellite imagery, a TB-scale geospatial data lake with Apache Iceberg and Trino, and Go services.",

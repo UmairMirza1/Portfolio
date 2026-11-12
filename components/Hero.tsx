@@ -8,7 +8,7 @@ import {
 } from "@/data/contentConfig";
 
 const Hero = () => {
-  const { name, title, company, location, availability, summary, now } =
+  const { name, title, company, location, availability, summary } =
     headerData;
 
   return (
@@ -20,14 +20,7 @@ const Hero = () => {
       <div className="container-page pt-12 pb-14 sm:pt-20 sm:pb-20">
         <div className="flex flex-col-reverse gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-2xl">
-            <p className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-3 py-1 text-xs font-medium text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900/80 dark:text-zinc-300">
-              <span className="relative flex h-2 w-2" aria-hidden>
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60 motion-reduce:hidden" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-              </span>
-              Now: {now}
-            </p>
-            <p className="eyebrow mt-6">{title}</p>
+            <p className="eyebrow">{title}</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
               {name}
             </h1>
